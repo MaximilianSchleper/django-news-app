@@ -41,3 +41,16 @@ class SignupPageTests(TestCase):
     self.assertEqual(get_user_model().objects.all().count(), 1)
     self.assertEqual(get_user_model().objects.all()[0].username, self.username)
     self.assertEqual(get_user_model().objects.all()[0].email, self.email)
+
+# password change and reset tests
+class PasswordResetTests(TestCase):
+  username = 'paul'
+  email = 'newuser@email.com'
+  password = 'testpw1'
+  
+  def test_pw_reset_page_status_code(self):
+    response = self.client.get('/users/password_reset/')
+    self.assertEqual(response.status_code, 200)
+
+# email tests:
+

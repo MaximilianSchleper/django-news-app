@@ -140,4 +140,3 @@ EMAIL_HOST_USER = os.environ.get('EM_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EM_PW')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
