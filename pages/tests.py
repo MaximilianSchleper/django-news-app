@@ -12,7 +12,7 @@ class HomePageTests(SimpleTestCase):
     response = self.client.get(reverse('home'))
     self.assertEqual(response.status_code, 200)
 
-  def test_view_user_correct_template(self):
+  def test_view_uses_correct_template(self):
     response = self.client.get(reverse('home'))
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'home.html')
@@ -44,9 +44,9 @@ class SignupPageTests(TestCase):
 
 # password change and reset tests
 class PasswordResetPageTests(TestCase):
-  username = 'paul'
-  email = 'newuser@email.com'
-  password = 'testpw1'
+  # username = 'paul'
+  # email = 'newuser@email.com'
+  # password = 'testpw1'
   
   def test_pw_reset_page_status_code(self):
     response = self.client.get('/users/password_reset/')
