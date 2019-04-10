@@ -19,3 +19,5 @@ class ArcticlePageTests(TestCase):
   
 # class ArticleCRUDTests(TestCase):
   # todo: test article CRUD
+
+# test article permissions
